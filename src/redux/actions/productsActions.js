@@ -11,6 +11,41 @@ export const fetchProduct = (id) => async (dispatch) => {
   dispatch({ type: ActionTypes.SELECTED_PRODUCT, payload: response.data });
 };
 
+export const addToCart = (itemID) => {
+  return {
+    type: ActionTypes.ADD_TO_CART,
+    payload: {
+      id: itemID,
+    },
+  };
+};
+
+export const removeFromCart = (itemID) => {
+  return {
+    type: ActionTypes.REMOVE_FROM_CART,
+    payload: {
+      id: itemID,
+    },
+  };
+};
+
+export const adjustItemQty = (itemID, qty) => {
+  return {
+    type: ActionTypes.ADJUST_ITEM_QTY,
+    payload: {
+      id: itemID,
+      qty,
+    },
+  };
+};
+
+export const loadCurrentItem = (item) => {
+  return {
+    type: ActionTypes.LOAD_CURRENT_ITEM,
+    payload: item,
+  };
+};
+
 export const setProducts = (products) => {
   return {
     type: ActionTypes.SET_PRODUCTS,
