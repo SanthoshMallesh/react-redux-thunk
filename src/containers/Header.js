@@ -22,7 +22,14 @@ const Header = ({ cart }) => {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto"></Nav>
+          <Nav className="me-auto">
+            <Nav.Link href="#features">
+              <Link to="/">Shop</Link>
+            </Nav.Link>
+            <Nav.Link href="#features">
+              <Link to="/con">Concepts</Link>
+            </Nav.Link>
+          </Nav>
           <Nav>
             <Nav.Link>
               <Link to="/cart">Cart</Link>
